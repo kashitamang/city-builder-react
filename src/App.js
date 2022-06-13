@@ -19,7 +19,7 @@ function App() {
   const [cityName, setCityName] = useState('Warsaw');
   // finally, you'll need an array of slogans, which could start out as ['The City of Excellence'] for example
   const [slogans, setSlogans] = useState(['']);
-
+// boopie 
   return (
     <div className="App">
       {/* CHECK here, the City component takes in skylineId, waterfrontId, castleId as props. 
