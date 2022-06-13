@@ -18,12 +18,11 @@ function App() {
 
   const [cityName, setCityName] = useState('Warsaw');
   // finally, you'll need an array of slogans, which could start out as ['The City of Excellence'] for example
-  const [slogans, setSlogans] = useState([]);
-  const [sloganInForm, setSloganInForm] = useState('');
+  const [slogans, setSlogans] = useState(['']);
 
   return (
     <div className="App">
-      {/* here, the City component takes in skylineId, waterfrontId, castleId as props. 
+      {/* CHECK here, the City component takes in skylineId, waterfrontId, castleId as props. 
       It'll use those ids to render pictures correctly. */}
       <City
         skylineId={skyline}
@@ -31,8 +30,8 @@ function App() {
         castleId={castle}
       />
       <h1>
-        {/* dynamically update the city name here using state */}
-        Welcome to beautiful Portland!
+        {/* CHECK dynamically update the city name here using state */}
+        Welcome to beautiful {cityName}!
       </h1>
       <div className='bottom'>
         {/* CHECK here, the CityNameInput component takes in the setCityName state handler function */}
@@ -46,9 +45,15 @@ function App() {
           <WaterfrontDropdown setWaterfront={setWaterfront}/>
           <CastleDropdown setCastle={setCastle}/>
         </section>
-        {/* here, the SloganForm component takes in the setSlogans state handler function and the slogans array that live in state */}
-        {/* here, the SloganList component takes the array of slogans that lives in state */}
-
+        {/* here, the SloganForm component takes in the 
+        setSlogans state handler function and the 
+        slogans array that live in state */}
+        <SloganForm 
+          setSlogans={setSlogans}
+          slogans={slogans}/>
+        {/* here, the SloganList component takes the 
+        array of slogans that lives in state */}
+        <SloganList slogans={slogans}/>
       </div>
     </div>
   );
