@@ -16,7 +16,7 @@
 
 | Components                                                                                |             |
 | :----------------------------------------------------------------------------------- | ----------: |
-| `App()` : tracks state for `skylineId`, `waterfrontId`, `castleId`, `slogans`, `sloganInForm` and `cityName` |1|
+✅| `App()` : tracks state for `skylineId`, `waterfrontId`, `castleId`, `slogans`, `sloganInForm` and `cityName` |1|
 | `App()` : passes state as props correctly to `CityNameInput` and `City`, `SloganForm`, `SloganList` |1|
 | `CityNameInput({ setCityName })` : on change, call `setCityName` with the new `e.target.value` to change `App.js` state |.5|
 | `City({waterfrontId, skylineId, castleId })` : use the 3 props to render the correct images that live in the `public` directory |1|
